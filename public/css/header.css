@@ -1,0 +1,22 @@
+body{
+    background-color: #f8d7da;
+}
+h6,a{
+    color: #333;
+}
+/*a标签样式*/
+a:hover{
+    color:#333;
+    text-decoration: none;
+}
+/*微调ul与购物车的垂直方向对齐*/
+.nav-item{
+    margin-top: 2px;
+}
+h3.font-15{
+    font: 20px Arial,"宋体";
+    margin-left: 41px;
+}
+.bg-color{
+    background-color: #fbf2f1;
+}

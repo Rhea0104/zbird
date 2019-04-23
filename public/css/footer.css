@@ -1,0 +1,10 @@
+body{
+    background-color: #fbf2f1;
+}
+ul>li>a{
+    color:#999;
+}
+ul>li>a:hover{
+    color: #ea6c97b5;
+    text-decoration: none;
+}
