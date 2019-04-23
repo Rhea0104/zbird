@@ -1,0 +1,14 @@
+div.container{
+    background-image: url(img/login/body_bg.jpg);
+}
+h4{
+    font: 20px Arial, "ËÎÌו";
+}
+a{
+    font: 12px Arial, "ËÎÌו";
+    color: #666;
+}
+a:hover{
+    color: #666;
+    text-decoration: none;
+}

@@ -1,10 +1,28 @@
 body{
     background-color: #fbf2f1;
 }
-ul>li>a{
+ul.nav a.nav-link{
+    color: rgb(0, 0, 0, 0.7);
+}
+ul>li>a,p{
     color:#999;
 }
 ul>li>a:hover{
     color: #ea6c97b5;
     text-decoration: none;
+}
+@media screen and (max-width: 991px){
+    .wechat,.sina{
+        width: 50% !important;
+    }
+    ul.nav a.nav-link{
+        font-size: 14px;
+    }
+}
+ul.breadcrumb,p{
+    background-color: #fbf2f1;
+    font: 12px Arial,"ËÎÌו";
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "|";
 }
