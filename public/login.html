@@ -1,10 +1,49 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/comm.css"/>
+	<link rel="stylesheet" href="css/login.css"/>
 </head>
 <body>
+<header>
+	<iframe class="header w-100" src="header.html" frameborder="0" scrolling="no"></iframe>
+</header>
+<div class="container p-0">
+	<div class="row m-0 p-0">
+		<div class="col-6"></div>
+		<div class="col-6 px-5 pt-5">
+			<div class="main">
+				<h4 class="d-inline-block pt-2">会员登录</h4>
+				<a class="float-right pt-3" href="reg.html">快速注册</a>
+				<div class="form">
+					<input class="form-control w-75 " type="text"/>
+					<input class="form-control w-75 " type="text"/>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox"/>自动登录
+					</div>
+					<a href="#">忘记密码</a>
+					<input type="submit" value="登录"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<iframe class="footer w-100" src="footer.html" frameborder="0" scrolling="no"></iframe>
+</footer>
+
+
+
+
+
+
+
 	用户名：<input type="text" id='uname' onfocus='uname_focus()' onblur='uname_blur()'><span id='s1'></span><br>
 	密码：<input type="text" id='upwd' onfocus='upwd_focus()' onblur='upwd_blur()'><span id='s2'></span><br>
 	<button onclick='login()'>登录</button>
