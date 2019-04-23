@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<script>
+		function getUserList(){
+			var xhr = null
+			if(window.XMLHttpRequest){
+				xhr = new XMLHttpRequest()
+			}else{
+				xhr = new ActiveXObject('Microsoft.XMLHTTP')
+			}
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var users = JSON.parse(xhr.responseText)
+					console.log(users)
+					var html='';
+					var gender = null;
+					for(var i=0;i<users.length;i++){
+						if(users[i].gender==0){
+							gender='女'
+						}else if(users[i].gender==1){
+							gender='男'
+						}else{
+							gender='不详'
+						}
+						html+=`<tr>
+										<td>${users[i].uid}</td>
+										<td>${users[i].uname}</td>
+										<td>${users[i].upwd}</td>
+										<td>${users[i].email}</td>
+										<td>${users[i].user_name}</td>
+										<td>${users[i].phone}</td>
+										<td>${gender}</td>
+										<td>
+											<a href='update.html?uid=${users[i].uid}'>修改</a>
+											<a href='javascript:delUser(${users[i].uid})'>删除</a>
+										</td>
+									</tr>`
+					}
+					body.innerHTML=html
+				}
+			}
+			xhr.open('get','/user/query',true)
+			xhr.send()
+		}
+		function updateUser(uid){
+			console.log(uid)
+			
+		}
+		function delUser(uid){
+			console.log(uid)
+			var xhr = null
+			if(window.XMLHttpRequest){
+				xhr = new XMLHttpRequest()
+			}else{
+				xhr = new ActiveXObject('Microsoft.XMLHTTP')
+			}
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result = xhr.responseText
+					if(result==1){
+						alert('删除成功')
+						getUserList()
+					}else{
+						alert('删除失败')
+					}
+				}
+			}
+			xhr.open('get','/user/del?uid='+uid,true)
+			xhr.send()
+		}
+	</script>
+ </head>
+ <body onload='getUserList()'>
+	<table border='1px'>
+		<thead>	
+			<tr>
+				<th>id</th>
+				<th>用户名</th>
+				<th>用户密码</th>
+				<th>用户邮箱</th>
+				<th>真实姓名</th>
+				<th>联系方式</th>
+				<th>性别</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody id='body'></tbody>
+	</table>	
+ </body>
+</html>

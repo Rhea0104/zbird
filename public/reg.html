@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	用户名称:<input type="text" id='uname' onfocus='uname_focus()' onblur='uname_blur()'><span id="s1"></span>	<br>
+	用户密码:<input type="password" id='upwd' onfocus='upwd_focus()' onblur='upwd_blur()'><span id="s2"></span> <br>
+	<button onclick='regUser()'>注册</button>
+	
+	<script>
+		function regUser(){
+			if(s1.innerHTML == '通过'){
+				var xhr = null
+				if(window.XMLHttpRequest){
+					xhr = new XMLHttpRequest()
+				}else{
+					xhr = new ActiveXObject('Microsoft.XMLHTTP')
+				}
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result = xhr.result
+						console.log(result)
+						if(s1.innerHTML=='通过' && s2.innerHTML=='通过'){
+							alert('注册成功')
+						}else{
+							alert('注册失败')
+						}
+					}
+				}
+				xhr.open('post','/user/reg',true)
+				xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
+				var formdata = "uname="+uname.value+"&upwd="+upwd.value
+				xhr.send(formdata)
+			}else{
+				alert('用户名已存在')
+			}
+		}
+		//用户名得到焦点
+		function uname_focus(){
+			s1.innerHTML = '用户名为4-10位的数字或者密码'
+		}
+		//密码得到焦点
+		function upwd_focus(){
+			s2.innerHTML = '密码为6-12位的数字或者密码'
+		}
+		//用户名失去焦点时
+		function uname_blur(){
+			if(uname.value==''){
+				s1.innerHTML = '用户名不能为空'
+			}else{
+				//1.创建异步对象
+				var xhr = null
+				if(window.XMLHttpRequest){
+					xhr = new XMLHttpRequest()
+				}else{
+					xhr = new ActiveXObject('Microsoft.XMLHTTP')
+				}
+				//console.log(xhr)
+				//4.绑定监听，得到响应
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var result = JSON.parse(xhr.responseText)
+						//console.log(result)
+						if(result.length>0){
+							s1.innerHTML = '用户名已存在'
+						}else{
+							s1.innerHTML = '通过'
+						}
+					}
+				}
+				//2.打开连接，创建请求
+				xhr.open('get','/user/reg?uname='+uname.value,true)
+				//3.发送请求
+				xhr.send()
+			}
+		}
+		//密码失去焦点时
+		function upwd_blur(){
+			if(upwd.value==''){
+				s2.innerHTML = '密码不能为空'
+			}else{
+				s2.innerHTML = '通过'
+			}
+		}
+	</script>
+</body>
+</html>

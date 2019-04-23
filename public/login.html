@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	用户名：<input type="text" id='uname' onfocus='uname_focus()' onblur='uname_blur()'><span id='s1'></span><br>
+	密码：<input type="text" id='upwd' onfocus='upwd_focus()' onblur='upwd_blur()'><span id='s2'></span><br>
+	<button onclick='login()'>登录</button>
+</body>
+<script>
+	function uname_focus(){
+		s1.innerHTML = '用户名为4~10位的字母或者数字'
+	}
+	function upwd_focus(){
+		s2.innerHTML = '密码为6~16位的字母或者数字'
+	}
+	function uname_blur(){
+		if(uname.value=='')
+			s1.innerHTML = '用户名不能为空'
+		else
+			s1.innerHTML = '通过'
+	}
+	function upwd_blur(){
+		if(upwd.value=='')
+			s2.innerHTML = '密码不能为空'
+		else
+			s2.innerHTML = '通过'
+	}
+	function login(){
+		if(uname.value!='' && upwd.value!=''){
+			var xhr = null
+			if(window.XMLHttpRequest){
+				xhr = new XMLHttpRequest()
+			}else{
+				xhr = new ActiveXObject('Microsoft.XMLHTTP')
+			}
+			//console.log(xhr)
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState==4 && xhr.status==200){
+					var result = JSON.parse(xhr.responseText)
+					console.log(result)
+					if(result.length!=''){
+						alert('登录成功')
+					}else{
+						alert('登录失败')
+					}
+				}
+			}
+			xhr.open('post','/user/login',true)
+			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
+			var formdata = 'uname='+uname.value+'&upwd='+upwd.value
+			//console.log(formdata)
+			xhr.send(formdata)
+		}
+	}
+</script>
+</html>	
