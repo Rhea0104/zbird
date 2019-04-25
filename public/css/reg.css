@@ -18,7 +18,7 @@ a:hover{
     background-color: #fcedea;
     /*height: 300px;*/
 }
-span{
+span,a.login{
     height: 12px;
     color: #ea6c97b5;
 }
@@ -33,7 +33,7 @@ a.nav-link{
 }
 a.two{
     background: url(../img/login/weixin-btn.jpg) no-repeat left top;
- }
+}
 a.three{
     background: url(../img/login/sina-btn.jpg) no-repeat left top;
 }

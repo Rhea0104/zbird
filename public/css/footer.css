@@ -11,6 +11,13 @@ ul>li>a:hover{
     color: #ea6c97b5;
     text-decoration: none;
 }
+ul.breadcrumb,p{
+    background-color: #fbf2f1;
+    font: 12px Arial,"ËÎÌו";
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "|";
+}
 @media screen and (max-width: 991px){
     .wechat,.sina{
         width: 50% !important;
@@ -19,10 +26,9 @@ ul>li>a:hover{
         font-size: 14px;
     }
 }
-ul.breadcrumb,p{
-    background-color: #fbf2f1;
-    font: 12px Arial,"ËÎÌו";
-}
-.breadcrumb-item + .breadcrumb-item::before {
-    content: "|";
+@media screen and (max-width: 500px){
+    ul.nav a.nav-link{
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
 }

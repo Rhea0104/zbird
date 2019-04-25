@@ -1,21 +1,23 @@
 body{
     background-color: #fadeda;
+    margin: 0;
+    padding: 0;
 }
 .small_font{
     font: 12px  Arial,"ËÎÌו";
 }
 @media screen and (min-width: 992px){
-    .header{  height: 11rem;  }
-    .footer{  height: 18rem;  }
+    header,.header{  height: 11rem;  }
+   footer, .footer{  height: 18rem;  }
 }
 @media screen and (max-width: 991px){
-    .header{  height: 12rem;  }
-    .footer{  height: 35rem;  }
+    header,.header{  height: 12rem;  }
+    footer,.footer{  height: 35rem;  }
 }
 .form-control{
     font: 12px Arial, "ËÎÌו";
     color: #666;
 }
-.form-control:focus{
+.form-control:focus,.btn:focus{
     box-shadow: 0 0 0 0;
 }
