@@ -1,14 +1,56 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/comm.css"/>
+	<link rel="stylesheet" href="css/reg.css"/>
 </head>
 <body>
-	用户名称:<input type="text" id='uname' onfocus='uname_focus()' onblur='uname_blur()'><span id="s1"></span>	<br>
-	用户密码:<input type="password" id='upwd' onfocus='upwd_focus()' onblur='upwd_blur()'><span id="s2"></span> <br>
-	<button onclick='regUser()'>注册</button>
-	
+<header>
+	<iframe class="header w-100" src="header.html" frameborder="0" scrolling="no"></iframe>
+</header>
+<div class="container p-0">
+	<div class="row m-0 p-0">
+		<div class="col-lg-6 bg_img"></div>
+		<div class="col-lg-6 col-sm-12 px-5 pt-5 ">
+			<div class="main mb-5 pb-5 mx-md-5 mx-lg-0">
+				<div class="mt-5 mx-5">
+					<h4 class="d-inline-block pt-2">欢迎注册</h4>
+					<a class="login float-right pt-3 " href="login.html">请登录</a>
+					<a class="float-right pt-3 mr-3" href="login.html">已有账号</a>
+				</div>
+				<div class="form px-5 pt-5 mx-5">
+					<input class="form-control border-0 " type="text" placeholder="用户名" id='uname' onfocus='uname_focus()' onblur='uname_blur()'/>
+					<span id='s1' class="pl-2"></span>
+					<input class="form-control border-0" type="text" placeholder="密码" id='upwd' onfocus='upwd_focus()' onblur='upwd_blur()'/>
+					<span id='s2' class="pl-2"></span>
+					<input class="form-control border-0" type="text" placeholder="手机号" id='phone' onfocus='phone_focus()' onblur='phone_blur()'/>
+					<span id='s3' class="pl-2"></span>
+					<input class="form-control border-0" type="text" placeholder="邮箱号" id='email' onfocus='email_focus()' onblur='email_blur()'/>
+					<span id='s4' class="pl-2"></span>
+					<input class="my-4" type="radio" name='gender' sex="man"/>男
+					<input class="ml-3" type="radio" name='gender' sex="woman"/>女
+					<input class="btn w-100 mb-5" type="submit" value="注册" onclick="regUser()"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<iframe class="footer w-100" src="footer.html" frameborder="0" scrolling="no"></iframe>
+</footer>
+
+	<!--用户名称:<input type="text" id='uname' onfocus='uname_focus()' onblur='uname_blur()'><span id="s1"></span>	<br>-->
+	<!--用户密码:<input type="password" id='upwd' onfocus='upwd_focus()' onblur='upwd_blur()'><span id="s2"></span> <br>-->
+	<!--<button onclick='regUser()'>注册</button>-->
+
+
+
 	<script>
 		function regUser(){
 			if(s1.innerHTML == '通过'){
