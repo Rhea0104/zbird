@@ -8,10 +8,10 @@ body{
 }
 @media screen and (min-width: 992px){
     header,.header{  height: 11rem;  }
-   footer, .footer{  height: 18rem;  }
+    footer,.footer{  height: 18rem;  }
 }
 @media screen and (max-width: 991px){
-    header,.header{  height: 12rem;  }
+    header,.header{  height: 16rem;  }
     footer,.footer{  height: 35rem;  }
 }
 .form-control{

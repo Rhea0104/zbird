@@ -14,7 +14,41 @@
     <iframe class="header w-100" src="header.html" frameborder="0" scrolling="no"></iframe>
 </header>
 <body>
-<div class="container"></div>
+<div class="container-fluid p-0">
+    <div class="bg_gray">
+        <div class="container p-0">
+            <ul class="nav">
+                <li class="nav-item px-3 active"><a class="nav-link  text-white small_font" href="#">首页</a></li>
+                <li class="nav-item px-3"><a class="nav-link  text-white small_font" href="#">婚戒</a></li>
+                <li class="nav-item px-3"><a class="nav-link  text-white small_font" href="#">对戒</a></li>
+                <li class="nav-item px-3"><a class="nav-link  text-white small_font" href="#">配饰</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 轮播图-->
+    <div class="carousel" id="carousel" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active"><a href="#"><img class="w-100" src="img/index/carousel/carousel1.jpg" alt=""/></a></div>
+            <div class="carousel-item"><a href="#"><img class="w-100" src="img/index/carousel/carousel2.jpg" alt=""/></a></div>
+            <div class="carousel-item"><a href="#"><img class="w-100" src="img/index/carousel/carousel3.jpg" alt=""/></a></div>
+            <div class="carousel-item"><a href="#"><img class="w-100" src="img/index/carousel/carousel4.jpg" alt=""/></a></div>
+            <div class="carousel-item"><a href="#"><img class="w-100" src="img/index/carousel/carousel5.jpg" alt=""/></a></div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+        <ul class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#carousel"></li>
+            <li data-slide-to="1" data-target="#carousel"></li>
+            <li data-slide-to="2" data-target="#carousel"></li>
+            <li data-slide-to="3" data-target="#carousel"></li>
+            <li data-slide-to="4" data-target="#carousel"></li>
+        </ul>
+    </div>
+</div>
 <footer>
     <iframe class="footer w-100" src="footer.html" frameborder="0" scrolling="no"></iframe>
 </footer>

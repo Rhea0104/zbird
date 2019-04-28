@@ -1,0 +1,6 @@
+div.bg_gray{
+    background-color: #909090;
+}
+ul.nav>li:hover,li.active{
+    background-color: #fdb2a4;
+}

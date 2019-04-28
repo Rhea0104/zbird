@@ -20,3 +20,18 @@ h3.font-15{
 .bg-color{
     background-color: #fbf2f1;
 }
+
+input.search{
+    background:#fff url(../img/header/icon_ser.jpg) no-repeat right center;
+    width: 15rem;
+}
+input.search:focus{
+    border-color: rgb(204,204,204);
+}
+@media screen and (max-width: 991px){
+    input.search{
+        width: 20rem;
+        margin-bottom: 2rem;
+        margin-left: 3rem;
+    }
+}
