@@ -4,10 +4,10 @@ body{
     padding: 0;
 }
 .small_font{
-    font: 12px  Arial,"ËÎÌå";
+    font: 12px  Arial,"å®‹ä½“";
 }
 @media screen and (min-width: 992px){
-    header,.header{  height: 11rem;  }
+    header,.header{  height: 12.9rem;  }
     footer,.footer{  height: 18rem;  }
 }
 @media screen and (max-width: 991px){
@@ -15,7 +15,7 @@ body{
     footer,.footer{  height: 35rem;  }
 }
 .form-control{
-    font: 12px Arial, "ËÎÌå";
+    font: 12px Arial, "å®‹ä½“";
     color: #666;
 }
 .form-control:focus,.btn:focus{

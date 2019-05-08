@@ -1,11 +1,9 @@
 body{
     background-color: #fff;
 }
+
 a:hover{
     text-decoration: none;
-}
-div.bg_gray{
-    background-color: #909090;
 }
 div.bg_lightgray{
     background-color: #f5f5f5;
@@ -13,11 +11,8 @@ div.bg_lightgray{
 .bg_pink{
     background-color: #feb8ae;
 }
-/*µ¼º½À¸*/
-ul.nav>li:hover,li.active{
-    background-color: #fdb2a4;
-}
-/*ÂÖ²¥Í¼*/
+
+/*ï¿½Ö²ï¿½Í¼*/
 span.prev,span.next{
     width: 45px;
     height: 70px;
@@ -44,7 +39,7 @@ ul.carousel-indicators>li.active{
     background-color: #fdb2a4;
 }
 h2{
-    font: 24px Arial,"ËÎÌå";
+    font: 24px Arial,"ï¿½ï¿½ï¿½ï¿½";
 }
 ul.navbar li.nav-item a.nav-link{
     color: #fff;
@@ -52,7 +47,7 @@ ul.navbar li.nav-item a.nav-link{
 ul.navbar li.nav-item a.nav-link:hover{
      color: #000;
 }
-/*×êÊ¯ÅÅ²¼*/
+/*ï¿½ï¿½Ê¯ï¿½Å²ï¿½*/
 ul>li>a>i{
     display: block;
     height: 50px;
@@ -90,7 +85,7 @@ ul>li>a>span,ul>li>a:hover{
     color:#b7b7b7;
     text-decoration: none;
 }
-/*Õ¤¸ñ*/
+/*Õ¤ï¿½ï¿½*/
 @media screen and (min-width:1200px){
     div.left_top{
         min-height: 415px;

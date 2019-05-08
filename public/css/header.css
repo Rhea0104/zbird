@@ -1,20 +1,27 @@
 body{
     background-color: #fadeda;
 }
+div.bg_gray{
+    background-color: #909090;
+}
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+ul.nav>li:hover,li.active{
+    background-color: #fdb2a4;
+}
 h6,a{
     color: #333;
 }
-/*a±êÇ©ÑùÊ½*/
+/*aï¿½ï¿½Ç©ï¿½ï¿½Ê½*/
 a:hover{
     color:#333;
     text-decoration: none;
 }
-/*Î¢µ÷ulÓë¹ºÎï³µµÄ´¹Ö±·½Ïò¶ÔÆë*/
+/*Î¢ï¿½ï¿½ulï¿½ë¹ºï¿½ï³µï¿½Ä´ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 .nav-item{
     margin-top: 2px;
 }
 h3.font-15{
-    font: 20px Arial,"ËÎÌå";
+    font: 20px Arial,"ï¿½ï¿½ï¿½ï¿½";
     margin-left: 41px;
 }
 .bg-color{
